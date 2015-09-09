@@ -59,7 +59,7 @@ function setPush() {
 }
 
 function subscribe(sw) {
-  sw.pushManager.subscribe().then(setSubscription, resetSubscription);
+  sw.pushManager.subscribe({userVisibleOnly:true}).then(setSubscription, resetSubscription);
 }
 
 function unsubscribe() {
